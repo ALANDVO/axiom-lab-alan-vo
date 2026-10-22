@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "axiom-lab-alan-vo",
+  "owner": "ALANDVO",
+  "email": "alanvo@gmail.com",
+  "domain": "AI/ML developer tools",
+  "summary": "Work in progress: axiom-lab-alan-vo",
+  "workflows": [
+    "Look up a skill, role, or industry term to see if freehire recognizes it (canonical hit, alias hit, or miss)",
+    "Submit unrecognized terms to a deduplicated miss queue for maintainer review and dictionary growth",
+    "Browse recorded misses by type with request counts as prioritization signal"
+  ],
+  "auth": "oidc-keycloak-saml-broker",
+  "llm_providers": [
+    "openai-compatible",
+    "anthropic",
+    "gemini",
+    "ollama"
+  ],
+  "status": "work-in-progress"
+}

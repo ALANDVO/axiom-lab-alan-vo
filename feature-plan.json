@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "current_feature": "dictionary-coverage-checker",
+  "features": [
+    {
+      "id": "dictionary-coverage-checker",
+      "title": "Dictionary Coverage Checker",
+      "status": "done",
+      "acceptance": [
+        "Public page at /dictionary accepts skill/role/industry term input",
+        "Returns canonical hit, alias hit, or miss with correct classification",
+        "Misses recorded in deduplicated table with request count and timestamps",
+        "Backend API: POST /api/dictionary/lookup, GET /api/dictionary/misses",
+        "Frontend: search input, result display with three-state classification, submit-to-list on miss",
+        "Tests: backend lookup logic, miss recording, frontend search flow"
+      ],
+      "implementation": [
+        "backend/app/api/dictionary.py",
+        "backend/app/services/dictionary.py",
+        "backend/app/models/dictionary.py",
+        "frontend/src/components/DictionarySearch.tsx",
+        "frontend/src/components/MissList.tsx",
+        "frontend/src/pages/DictionaryPage.tsx",
+        "frontend/src/hooks/useDictionaryLookup.ts",
+        "frontend/src/hooks/useMisses.ts",
+        "frontend/src/api/client.ts",
+        "frontend/src/types/api.ts"
+      ],
+      "tests": [
+        "backend/tests/test_dictionary.py",
+        "frontend/src/components/DictionarySearch.test.tsx",
+        "frontend/src/components/MissList.test.tsx"
+      ]
+    },
+    {
+      "id": "candidate-profile-redesign",
+      "title": "Candidate Profile Redesign",
+      "status": "planned",
+      "acceptance": [
+        "Single-page profile replacing 8-tab structure",
+        "Unified autosave editing pattern across sections",
+        "Profile completeness indicator visible at glance",
+        "Sections: Profile, Contacts, Location, Skills, Experience, Education, Screening, Settings"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "anonymous-tracking-aggregation",
+      "title": "Anonymous Application Tracking Aggregation",
+      "status": "planned",
+      "acceptance": [
+        "Opt-in per-job sharing of anonymized application process data",
+        "K-anonymity floor (N≥5) before showing aggregates",
+        "Aggregate display: tracker count, stage timing buckets, outcome distribution",
+        "Backend aggregation API, frontend job posting integration"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "job-board-source-management",
+      "title": "Job Board Source Management",
+      "status": "planned",
+      "acceptance": [
+        "YAML-based source catalog for ATS providers",
+        "CLI/API to validate board liveness before adding",
+        "Provider adapter pattern for extensibility"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}
