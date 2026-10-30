@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum as PyEnum
 from sqlalchemy import (
     Column, String, DateTime, Integer, Index, UniqueConstraint, ForeignKey
@@ -27,8 +27,8 @@ class DictionaryEntry(Base):
     canonical_slug = Column(String(100), nullable=False, index=True)
     display_label = Column(String(200), nullable=False)
     aliases = Column(String(1000), nullable=True)  # comma-separated aliases
-    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
 
     __table_args__ = (
         UniqueConstraint("kind", "canonical_slug", name="uq_kind_canonical"),
@@ -44,8 +44,8 @@ class DictionaryMiss(Base):
     raw_term = Column(String(200), nullable=False)
     normalized_term = Column(String(200), nullable=False, index=True)
     request_count = Column(Integer, default=1, nullable=False)
-    first_requested_at = Column(DateTime, default=datetime.utcnow, nullable=False)
-    last_requested_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+    first_requested_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    last_requested_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
     submitted_by = Column(String(100), nullable=True)
     status = Column(String(20), default="pending", nullable=False)  # pending, accepted, rejected
     resolution_note = Column(String(500), nullable=True)

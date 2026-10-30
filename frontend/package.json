@@ -23,5 +23,10 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/jest-dom": "^6.4.8",
     "jsdom": "^24.1.1"
+  },
+  "author": {
+    "name": "Alan Vo",
+    "email": "alanvo@gmail.com",
+    "url": "https://github.com/ALANDVO"
   }
 }
