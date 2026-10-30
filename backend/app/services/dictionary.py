@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass
 from typing import Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy.orm import Session
 from app.models.dictionary import (
     DictionaryEntry, DictionaryMiss, DictionaryKind, LookupResultType
@@ -199,7 +199,7 @@ def record_miss(db: Session, kind: DictionaryKind, raw_term: str, normalized: st
 
     if existing:
         existing.request_count += 1
-        existing.last_requested_at = datetime.utcnow()
+        existing.last_requested_at = datetime.now(timezone.utc)
         if submitted_by and not existing.submitted_by:
             existing.submitted_by = submitted_by
         db.commit()

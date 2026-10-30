@@ -1,4 +1,4 @@
-# freehire — Open-Source Search Engine for Job Seekers
+# freehire — Open-Source Search Engine for Job Seekers — Alan Vo
 
 > Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
 
