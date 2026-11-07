@@ -200,3 +200,7 @@ Keycloak realm import provided for:
 ## License
 
 MIT © Alan Vo <alanvo@gmail.com>
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

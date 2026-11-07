@@ -53,3 +53,6 @@ Acceptance:
 - CLI/API to validate board liveness before adding
 - Provider adapter pattern for extensibility
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

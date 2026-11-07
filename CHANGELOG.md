@@ -41,3 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Backend Dockerfile (non-root user, healthcheck)
 - Frontend Dockerfile (nginx, multi-stage build)
 - GitHub Actions CI workflow (backend tests, frontend build/test, Docker builds)
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
