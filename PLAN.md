@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-dictionary-coverage-checker
+candidate-profile-redesign
 
 ## Roadmap
 
@@ -26,13 +26,17 @@ Tests: `backend/tests/test_dictionary.py`, `frontend/src/components/DictionarySe
 
 ### candidate-profile-redesign — Candidate Profile Redesign
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Single-page profile replacing 8-tab structure
 - Unified autosave editing pattern across sections
 - Profile completeness indicator visible at glance
 - Sections: Profile, Contacts, Location, Skills, Experience, Education, Screening, Settings
+
+Implementation: `frontend/src/components/profile/ProfilePage.tsx`, `frontend/src/components/profile/ProfilePage.test.tsx`
+
+Tests: `frontend/src/components/profile/ProfilePage.test.tsx`
 
 ### anonymous-tracking-aggregation — Anonymous Application Tracking Aggregation
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "dictionary-coverage-checker",
+  "current_feature": "candidate-profile-redesign",
   "features": [
     {
       "id": "dictionary-coverage-checker",
@@ -35,15 +35,20 @@
     {
       "id": "candidate-profile-redesign",
       "title": "Candidate Profile Redesign",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Single-page profile replacing 8-tab structure",
         "Unified autosave editing pattern across sections",
         "Profile completeness indicator visible at glance",
         "Sections: Profile, Contacts, Location, Skills, Experience, Education, Screening, Settings"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "frontend/src/components/profile/ProfilePage.tsx",
+        "frontend/src/components/profile/ProfilePage.test.tsx"
+      ],
+      "tests": [
+        "frontend/src/components/profile/ProfilePage.test.tsx"
+      ]
     },
     {
       "id": "anonymous-tracking-aggregation",
