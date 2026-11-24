@@ -151,6 +151,7 @@ export const ProfilePage: React.FC = () => {
           Name
           <input
             type="text"
+            aria-label="Name"
             name="name"
             value={data.name || ''}
             onChange={handleChange}
@@ -162,6 +163,7 @@ export const ProfilePage: React.FC = () => {
           Current Role
           <input
             type="text"
+            aria-label="Current Role"
             name="current_role"
             value={data.current_role || ''}
             onChange={handleChange}
@@ -173,6 +175,7 @@ export const ProfilePage: React.FC = () => {
           Location
           <input
             type="text"
+            aria-label="Location"
             name="location"
             value={data.location || ''}
             onChange={handleChange}
@@ -191,6 +194,7 @@ export const ProfilePage: React.FC = () => {
               <li key={idx} style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline' }}>
                 <input
                   type="text"
+                  aria-label="Skill name"
                   name={`skill_${idx}_name`}
                   value={skill.name || ''}
                   onChange={e => {
@@ -272,6 +276,7 @@ export const ProfilePage: React.FC = () => {
           </select>
           <input
             type="text"
+            aria-label="Contact value"
             name="contact_value"
             value=""
             onChange={e => {
@@ -377,6 +382,7 @@ export const ProfilePage: React.FC = () => {
           </select>
           <input
             type="text"
+            aria-label="Screening answer"
             name="screening_answer"
             value=""
             onChange={e => {
@@ -399,6 +405,7 @@ export const ProfilePage: React.FC = () => {
           Notify me about new matching jobs
           <input
             type="checkbox"
+            aria-label="Notify me about new matching jobs"
             name="notify_new_jobs"
             checked={data.screening_answers.notify_new_jobs === 'yes'}
             onChange={e => setData(prev => ({
